@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class IndexComponent extends Component {
+class MainComponent extends Component {
   render() {
     if (this.props.items.length === 0) {
       return (
@@ -10,7 +10,7 @@ class IndexComponent extends Component {
 
     return (
       <section>
-        <h2>react-webpack-boilerplate</h2>
+        <h2>Weather</h2>
         <ul ref="indexList" className="index-list">
           {this.props.items.map((item, index) => {
             return (<li key={index}>item {item}</li>);
@@ -21,8 +21,8 @@ class IndexComponent extends Component {
   }
 }
 
-IndexComponent.defaultProps = {
+MainComponent.defaultProps = {
   items: []
 };
 
-export default IndexComponent;
+export default MainComponent;
